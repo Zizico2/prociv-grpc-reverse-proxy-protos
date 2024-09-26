@@ -270,7 +270,7 @@ enum CSRPEC {
   // ANEPC: "Tâmega e Sousa"
   CSRPEC_TAMEGA_E_SOUSA = 7;
   // Comando Sub-Regional das Terras de Trás-os-Montes
-  // ANEPC: "Terras de Trás-os-Montes" ???
+  // ANEPC: "Terras de Trás-os-Montes"
   CSRPEC_TERRAS_DE_TRAS_OS_MONTES = 8;
   // Comando Sub-Regional da Beira Baixa
   // ANEPC: "Beira Baixa" ???
@@ -294,7 +294,7 @@ enum CSRPEC {
   // ANEPC: "Grande Lisboa"
   CSRPEC_GRANDE_LISBOA = 15;
   // Comando Sub-Regional da Península de Setúbal
-  // ANEPC: "Península de Setúbal" ???
+  // ANEPC: "Península de Setúbal"
   CSRPEC_PENINSULA_DE_SETUBAL = 16;
   // Comando Sub-Regional da Lezíria do Tejo
   // ANEPC: "Lezíria do Tejo"
