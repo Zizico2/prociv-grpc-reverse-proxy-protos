@@ -107,3 +107,5 @@ enum Occurrence {
   // Operations and alert states
   OCCURRENCE_PRE_POSITIONING_DECIR = 9103;
 }
+
+message Test {}
