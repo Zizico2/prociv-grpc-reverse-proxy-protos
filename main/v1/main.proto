@@ -200,7 +200,9 @@ message OccurrenceKind {
 message Occurrence {
   OccurrenceKind kind = 1;
   google.protobuf.Timestamp start_date = 2;
-  County county = 3;
+  //
+  google.protobuf.Timestamp data_date = 3;
+  County county = 4;
 }
 
 enum County {
@@ -225,11 +227,92 @@ enum OccurrenceStatus {
   OCCURRENCE_STATUS_MONITORING = 6;
 }
 
-// enum Crpec {
-//   CRPEC_UNSPECIFIED = 0;
-//   CRPEC_CENTER = 1;
-//   CRPEC_NORTH = 2;
-//   CRPEC_LISBON_AND_TAGUS_VALLEY = 3;
-//   CRPEC_ALGARVE = 4;
-//   CRPEC_ALENTEJO = 5;
-// }
+enum CRPEC {
+  CRPEC_UNSPECIFIED = 0;
+  // "Norte"
+  CRPEC_NORTH = 1;
+  // "Centro"
+  CRPEC_CENTER = 2;
+  // "Lisboa e Vale do Tejo"
+  CRPEC_LISBON_AND_TAGUS_VALLEY = 3;
+  // "Alentejo"
+  CRPEC_ALGARVE = 4;
+  // "Algarve"
+  CRPEC_ALENTEJO = 5;
+}
+
+enum CSRPEC {
+  CSRPEC_UNSPECIFIED = 0;
+  // Comando Sub-Regional do Alto Minho
+  // ANEPC: "Alto Minho"
+  CSRPEC_ALTO_MINHO = 1;
+  // Comando Sub-Regional do Alto Tâmega e Barroso
+  // ANEPC: "Alto Tâmega e Barroso"
+  CSRPEC_ALTO_TAMEGA_E_BARROSO = 2;
+  // Comando Sub-Regional da Área Metropolitana do Porto
+  // ANEPC: "Area M. Porto"
+  CSRPEC_AREA_METROPOLITANA_DO_PORTO = 3;
+  // Comando Sub-Regional do Ave
+  // ANEPC: "Ave"
+  CSRPEC_AVE = 4;
+  // Comando Sub-Regional do Cávado
+  // ANEPC: "Cávado"
+  CSRPEC_CAVADO = 5;
+  // Comando Sub-Regional do Douro
+  // ANEPC: "Douro"
+  CSRPEC_DOURO = 6;
+  // Comando Sub-Regional do Tâmega e Sousa
+  // ANEPC: "Tâmega e Sousa"
+  CSRPEC_TAMEGA_E_SOUSA = 7;
+  // Comando Sub-Regional das Terras de Trás-os-Montes
+  // ANEPC: "Terras de Trás-os-Montes" ???
+  CSRPEC_TERRAS_DE_TRAS_OS_MONTES = 8;
+  // Comando Sub-Regional da Beira Baixa
+  // ANEPC: "Beira Baixa" ???
+  CSRPEC_BEIRA_BAIXA = 9;
+  // Comando Sub-Regional das Beiras e Serra da Estrela
+  // ANEPC: "Beiras e Serra da Estrela"
+  CSRPEC_BEIRAS_E_SERRA_DA_ESTRELA = 10;
+  // Comando Sub-Regional da Região de Aveiro
+  // ANEPC: "Região de Aveiro"
+  CSRPEC_REGIAO_DE_AVEIRO = 11;
+  // Comando Sub-Regional da Região de Coimbra
+  // ANEPC: "Região de Coimbra"
+  CSRPEC_REGIAO_DE_COIMBRA = 12;
+  // Comando Sub-Regional da Região de Leiria
+  // ANEPC: "Região de Leiria"
+  CSRPEC_REGIAO_DE_LEIRIA = 13;
+  // Comando Sub-Regional de Viseu Dão Lafões
+  // ANEPC: "Viseu Dão Lafões"
+  CSRPEC_VISEU_DAO_LAFOES = 14;
+  // Comando Sub-Regional da Grande Lisboa
+  // ANEPC: "Grande Lisboa"
+  CSRPEC_GRANDE_LISBOA = 15;
+  // Comando Sub-Regional da Península de Setúbal
+  // ANEPC: "Península de Setúbal" ???
+  CSRPEC_PENINSULA_DE_SETUBAL = 16;
+  // Comando Sub-Regional da Lezíria do Tejo
+  // ANEPC: "Lezíria do Tejo"
+  CSRPEC_LEZIRIA_DO_TEJO = 17;
+  // Comando Sub-Regional do Médio Tejo
+  // ANEPC: "Médio Tejo" ???
+  CSRPEC_MEDIO_TEJO = 18;
+  // Comando Sub-Regional do Oeste
+  // ANEPC: "Oeste"
+  CSRPEC_OESTE = 19;
+  // Comando Sub-Regional do Alentejo Central
+  // ANEPC: "Alentejo Central" ???
+  CSRPEC_ALENTEJO_CENTRAL = 20;
+  // Comando Sub-Regional do Alentejo Litoral
+  // ANEPC: "Alentejo Litoral" ???
+  CSRPEC_ALENTEJO_LITORAL = 21;
+  // Comando Sub-Regional do Alto Alentejo
+  // ANEPC: "Alto Alentejo" ???
+  CSRPEC_ALTO_ALENTEJO = 22;
+  // Comando Sub-Regional do Baixo Alentejo
+  // ANEPC: "Baixo Alentejo"
+  CSRPEC_BAIXO_ALENTEJO = 23;
+  // Comando Sub-Regional do Algarve
+  // ANEPC: "Algarve"
+  CSRPEC_BAIXO_ALGARVE = 24;
+}
