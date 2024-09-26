@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package main.v1;
 
+import "google/protobuf/timestamp.proto";
+
 enum NaturalPhenomenonType {
   NATURAL_PHENOMENON_TYPE_UNSPECIFIED = 0;
   NATURAL_PHENOMENON_TYPE_FLOOD = 1;
@@ -185,7 +187,7 @@ message OperationsAndAlertStates {
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
 
-message Occurrence {
+message OccurrenceKind {
   oneof kind {
     NaturalRisks natural_risks = 1;
     TechonogicalRisks technological_risks = 2;
@@ -193,6 +195,16 @@ message Occurrence {
     ProtectionAndAssitanceOfGoodsAndPeople protection_and_assitance_of_goods_and_people = 4;
     OperationsAndAlertStates operations_and_alert_states = 9;
   }
+}
+
+message Occurrence {
+  OccurrenceKind kind = 1;
+  google.protobuf.Timestamp start_date = 2;
+  County county = 3;
+}
+
+enum County {
+  COUNTY_UNSPECIFIED = 0;
 }
 
 enum GroupedStatus {
@@ -212,3 +224,12 @@ enum OccurrenceStatus {
   OCCURRENCE_STATUS_CONCLUDING = 5;
   OCCURRENCE_STATUS_MONITORING = 6;
 }
+
+// enum Crpec {
+//   CRPEC_UNSPECIFIED = 0;
+//   CRPEC_CENTER = 1;
+//   CRPEC_NORTH = 2;
+//   CRPEC_LISBON_AND_TAGUS_VALLEY = 3;
+//   CRPEC_ALGARVE = 4;
+//   CRPEC_ALENTEJO = 5;
+// }
