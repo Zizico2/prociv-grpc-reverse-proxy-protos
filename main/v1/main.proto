@@ -2,6 +2,189 @@ syntax = "proto3";
 
 package main.v1;
 
+enum NaturalPhenomenonType {
+  NATURAL_PHENOMENON_TYPE_UNSPECIFIED = 0;
+  NATURAL_PHENOMENON_TYPE_FLOOD = 1;
+  NATURAL_PHENOMENON_TYPE_STRONG_WINDS = 3;
+  NATURAL_PHENOMENON_TYPE_EARTHQUAKE = 5;
+  NATURAL_PHENOMENON_TYPE_SNOWSTORM = 7;
+  NATURAL_PHENOMENON_TYPE_HEAT_WAVES = 9;
+  NATURAL_PHENOMENON_TYPE_COLD_WAVES = 11;
+  NATURAL_PHENOMENON_TYPE_DROUGHTS = 13;
+  NATURAL_PHENOMENON_TYPE_COLLAPSE_OF_UNDERGROUND_CAVITIES = 19;
+  NATURAL_PHENOMENON_TYPE_LANDSLIDE = 25;
+}
+
+message NaturalRisks {
+  oneof type_group {
+    NaturalPhenomenonType natural_phenomenon = 1;
+  }
+}
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+
+enum UrbanFire {
+  URBAN_FIRE_UNSPECIFIED = 0;
+  URBAN_FIRE_RESIDENTIAL = 1;
+  URBAN_FIRE_ADMINISTRATIVE_SERVICES = 7;
+  URBAN_FIRE_SCHOOL_PARK = 9;
+  URBAN_FIRE_HOSPITAL = 11;
+  URBAN_FIRE_PUBLIC_EVENTS = 13;
+  URBAN_FIRE_HOTEL_RESTAURANT = 15;
+  URBAN_FIRE_COMMERCIAL_AREAS_TRANSPORT = 17;
+  URBAN_FIRE_SPORTS_AND_LEISURE = 19;
+  URBAN_FIRE_MUSEUM = 21;
+  URBAN_FIRE_LIBRARIES_ARCHIVES = 23;
+  URBAN_FIRE_MILITARY_SECURITY_FORCES = 25;
+  URBAN_FIRE_INDUSTRIAL_WAREHOUSE = 27;
+  URBAN_FIRE_DEGRADED_BUILDINGS = 29;
+}
+
+enum EquipmentAndProductsFire {
+  EQUIPMENT_AND_PRODUCTS_FIRE_UNSPECIFIED = 0;
+  EQUIPMENT_AND_PRODUCTS_FIRE_EQUIPMENT = 1;
+  EQUIPMENT_AND_PRODUCTS_FIRE_PRODUCTS = 3;
+}
+
+enum TransportsFire {
+  TRANSPORTS_FIRE_UNSPECIFIED = 0;
+  TRANSPORTS_FIRE_ROAD = 1;
+  TRANSPORTS_FIRE_AIR = 3;
+  TRANSPORTS_FIRE_RAIL = 5;
+  TRANSPORTS_FIRE_WATER = 7;
+}
+
+enum Accident {
+  ACCIDENT_UNSPECIFIED = 0;
+  ACCIDENT_ROAD_PEDESTRIAN_RUN_OVER = 1;
+  ACCIDENT_ROAD_COLLISION = 3;
+  ACCIDENT_OFF_ROAD = 5;
+  ACCIDENT_ROAD_CRASH = 7;
+  ACCIDENT_AIR = 9;
+  ACCIDENT_RAIL_PEDESTRIAN_RUN_OVER = 11;
+  ACCIDENT_RAIL_COLLISION = 13;
+  ACCIDENT_RAIL_CRASH = 15;
+  ACCIDENT_RAIL_DERAILMENT = 17;
+  ACCIDENT_SINKING_LISTING = 19;
+  ACCIDENT_GROUNDING = 21;
+  ACCIDENT_WATER_COLLISION = 23;
+  ACCIDENT_WATER_CRASH = 25;
+}
+
+enum IndustrialAccident {
+  INDUSTRIAL_ACCIDENT_UNSPECIFIED = 0;
+  INDUSTRIAL_ACCIDENT_RADIOLOGICAL_ON_SITE = 1;
+  INDUSTRIAL_ACCIDENT_CHEMICAL_ON_SITE = 3;
+  INDUSTRIAL_ACCIDENT_BIOLOGICAL_ON_SITE = 5;
+  INDUSTRIAL_ACCIDENT_RADIOLOGICAL_IN_TRANSIT = 7;
+  INDUSTRIAL_ACCIDENT_CHEMICAL_IN_TRANSIT = 9;
+  INDUSTRIAL_ACCIDENT_BIOLOGICAL_IN_TRANSIT = 11;
+}
+
+message TechonogicalRisks {
+  oneof type_group {
+    UrbanFire urban_fire = 1;
+    EquipmentAndProductsFire equipment_and_products_fire = 2;
+    TransportsFire transports_fire = 3;
+    Accident accident = 4;
+    IndustrialAccident industrial_accident = 5;
+  }
+}
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+
+enum RuralFire {
+  RURAL_FIRE_UNSPECIFIED = 0;
+  RURAL_FIRE_FOREST = 1;
+  RURAL_FIRE_BRUSH = 3;
+  RURAL_FIRE_AGRICULTURAL = 5;
+  RURAL_FIRE_REKINDLE_CONSOLIDATION = 7;
+  RURAL_FIRE_FUEL_MANAGEMENT = 9;
+  RURAL_FIRE_CONTROLLED_BURN = 11;
+}
+
+enum SecurityServicesStructuresCompromise {
+  SECURITY_SERVICES_STRUCTURES_COMPROMISE_UNSPECIFIED = 0;
+  SECURITY_SERVICES_STRUCTURES_COMPROMISE_TREE_FALL = 1;
+  SECURITY_SERVICES_STRUCTURES_COMPROMISE_BUILDING_COLLAPSE = 9;
+  SECURITY_SERVICES_STRUCTURES_COMPROMISE_BUILDING_ELEMENT_FALL = 11;
+  SECURITY_SERVICES_STRUCTURES_COMPROMISE_MASS_MOVEMENT = 13;
+  SECURITY_SERVICES_STRUCTURES_COMPROMISE_SURFACE_FLOODING = 15;
+  SECURITY_SERVICES_STRUCTURES_COMPROMISE_DAMAGE_TO_ELECTRICAL_GRIDS = 21;
+  SECURITY_SERVICES_STRUCTURES_COMPROMISE_DAMAGE_TO_WATER_SUPPLY_NETWORKS = 23;
+  SECURITY_SERVICES_STRUCTURES_COMPROMISE_DAMAGE_TO_GAS_SUPPLY_NETWORKS = 25;
+  SECURITY_SERVICES_STRUCTURES_COMPROMISE_DAMAGE_TO_OIL_AND_GAS_PIPELINES = 27;
+  SECURITY_SERVICES_STRUCTURES_COMPROMISE_TEMPORARY_STRUCTURE_COLLAPSE = 29;
+  SECURITY_SERVICES_STRUCTURES_COMPROMISE_ARTIFICIAL_GALLERY_COLLAPSE = 31;
+  SECURITY_SERVICES_STRUCTURES_COMPROMISE_DAM_RUPTURE = 33;
+}
+
+message MixedRisks {
+  oneof type_group {
+    RuralFire rural_fire = 1;
+    SecurityServicesStructuresCompromise security_services_structures_compromise = 3;
+  }
+}
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+
+enum HealthAssistance {
+  HEALTH_ASSISTANCE_UNSPECIFIED = 0;
+  HEALTH_ASSISTANCE_NEAR_DROWNING = 11;
+  HEALTH_ASSISTANCE_DROWNING = 13;
+}
+
+enum LegalConflictsIntervention {
+  LEGAL_CONFLICTS_INTERVENTION_UNSPECIFIED = 0;
+}
+
+enum AssistanceAndPreservationOfHumanActivities {
+  ASSISTANCE_AND_PRESERVATION_OF_HUMAN_ACTIVITIES_UNSPECIFIED = 0;
+}
+
+message ProtectionAndAssitanceOfGoodsAndPeople {
+  oneof type_group {
+    HealthAssistance health_assistance = 1;
+    LegalConflictsIntervention legal_conflicts_intervention = 2;
+    AssistanceAndPreservationOfHumanActivities assistance_and_preservation_of_human_activities = 3;
+  }
+}
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+
+enum Operations {
+  OPERATIONS_UNSPECIFIED = 0;
+  OPERATIONS_PRE_POSITIONING_DECIR = 1;
+}
+
+message OperationsAdndAlertStates {
+  oneof type_group {
+    Operations operations = 1;
+  }
+}
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+
+message Occurrence {
+  oneof family {
+    NaturalRisks natural_risks = 1;
+    TechonogicalRisks technological_risks = 2;
+    MixedRisks mixed_risks = 3;
+    ProtectionAndAssitanceOfGoodsAndPeople protection_and_assitance_of_goods_and_people = 4;
+    Operations operations = 9;
+  }
+}
+
 enum OccurrenceType {
   OCCURRENCE_TYPE_UNSPECIFIED = 0;
 
@@ -107,3 +290,30 @@ enum OccurrenceType {
   // Operations and alert states
   OCCURRENCE_TYPE_PRE_POSITIONING_DECIR = 9103;
 }
+
+enum GroupedStatus {
+  GROUPED_STATUS_UNSPECIFIED = 0;
+  GROUPED_STATUS_DISPATCHING = 1;
+  GROUPED_STATUS_ACTIVE = 2;
+  GROUPED_STATUS_RESOLVING = 3;
+  GROUPED_STATUS_CONCLUDING = 4;
+}
+
+enum OccurrenceStatus {
+  OCCURRENCE_STATUS_UNSPECIFIED = 0;
+  OCCURRENCE_STATUS_FIRST_DISPATCH = 1;
+  OCCURRENCE_STATUS_SITE_ARRIVAL = 2;
+  OCCURRENCE_STATUS_ACTIVE = 3;
+  OCCURRENCE_STATUS_RESOLVING = 4;
+  OCCURRENCE_STATUS_CONCLUDING = 5;
+  OCCURRENCE_STATUS_MONITORING = 6;
+}
+
+// message Occurrence {
+//   OccurrenceType type = 1;
+//   GroupedStatus grouped_status = 2;
+//   OccurrenceStatus occurrence_status = 3;
+//   /* optional string name = 1;
+//      optional int32 id = 2;
+//      optional string email = 3; */
+// }
