@@ -16,7 +16,7 @@ enum NaturalPhenomenonType {
 }
 
 message NaturalRisks {
-  oneof inner {
+  oneof family {
     NaturalPhenomenonType natural_phenomenon = 1;
   }
 }
@@ -84,7 +84,7 @@ enum IndustrialAccident {
 }
 
 message TechonogicalRisks {
-  oneof inner {
+  oneof family {
     UrbanFire urban_fire = 1;
     EquipmentAndProductsFire equipment_and_products_fire = 2;
     TransportsFire transports_fire = 3;
@@ -124,7 +124,7 @@ enum SecurityServicesStructuresCompromise {
 }
 
 message MixedRisks {
-  oneof inner {
+  oneof family {
     RuralFire rural_fire = 1;
     SecurityServicesStructuresCompromise security_services_structures_compromise = 3;
   }
@@ -159,7 +159,7 @@ enum AssistanceAndPreservationOfHumanActivities {
 }
 
 message ProtectionAndAssitanceOfGoodsAndPeople {
-  oneof inner {
+  oneof family {
     HealthAssistance health_assistance = 1;
     LegalConflictsIntervention legal_conflicts_intervention = 2;
     AssistanceAndPreservationOfHumanActivities assistance_and_preservation_of_human_activities = 3;
@@ -176,7 +176,7 @@ enum Operations {
 }
 
 message OperationsAndAlertStates {
-  oneof inner {
+  oneof family {
     Operations operations = 1;
   }
 }
@@ -186,7 +186,7 @@ message OperationsAndAlertStates {
 //////////////////////////////////////////////////////////
 
 message Occurrence {
-  oneof inner {
+  oneof kind {
     NaturalRisks natural_risks = 1;
     TechonogicalRisks technological_risks = 2;
     MixedRisks mixed_risks = 3;
