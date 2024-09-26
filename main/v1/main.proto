@@ -1,0 +1,67 @@
+// Copyright 2015 gRPC authors.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+
+package main.v1;
+
+service WildfiresService {
+  rpc ListFires(ListFiresRequest) returns (stream ListFiresResponse) {}
+}
+
+message Latitude {
+  float decimal = 1;
+}
+message Longitude {
+  float decimal = 1;
+}
+message Coordinates {
+  Latitude latitude = 1;
+  Longitude longitude = 2;
+}
+
+message ListFiresRequest {}
+
+message ListFiresResponse {
+  string nature = 1;
+  OccurenceStatus occurence_status = 2;
+  GroupedStatus grouped_status = 3;
+  Coordinates location = 4;
+}
+
+enum GroupedStatus {
+  GROUPED_STATUS_UNSPECIFIED = 0;
+  GROUPED_STATUS_ACTIVE = 1;
+  GROUPED_STATUS_CONCLUDING = 2;
+  GROUPED_STATUS_DISPATCH = 3;
+  GROUPED_STATUS_RESOLUTION = 4;
+}
+
+enum OccurenceStatus {
+  OCCURENCE_STATUS_UNSPECIFIED = 0;
+  OCCURENCE_STATUS_ACTIVE = 1;
+  OCCURENCE_STATUS_INITIAL_DISPATCH = 2;
+  OCCURENCE_STATUS_CONCLUDING = 3;
+  OCCURENCE_STATUS_RESOLUTION = 4;
+  OCCURENCE_STATUS_MONITORING = 5;
+  OCCURENCE_STATUS_ARRIVAL_ON_SCENE = 6;
+  OCCURENCE_STATUS_DISPATCH = 7;
+}
+
+enum OccurenceNature {
+  OCCURENCE_NATURE_UNSPECIFIED = 0;
+  OCCURENCE_NATURE_FOREST_FIRE = 1;
+  OCCURENCE_NATURE_BRUSH_FIRE = 2;
+  OCCURENCE_NATURE_AGRICULTURAL_FIRE = 3;
+}
