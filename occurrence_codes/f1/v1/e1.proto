@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-// Portugal
+// Fenómenos naturais
 package occurrence_codes.f1.v1;
 
 // Fenómenos naturais
