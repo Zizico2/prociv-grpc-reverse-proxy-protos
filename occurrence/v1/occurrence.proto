@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package occurrence.v1;
+
+import "foundation/v1/coordinates.proto";
+import "occurrence/v1/kind.proto";
+
+message Occuurrence {
+  Kind kind = 1;
+  foundation.v1.Coordinates location = 2;
+}
