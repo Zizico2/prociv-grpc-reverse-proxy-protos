@@ -1,17 +1,17 @@
 syntax = "proto3";
 
 // Incêndios em transportes
-package occurrence_codes.f2.v1;
+package occurrence_codes.c2.v1;
 
 // Incêndios em transportes
-enum E3 {
-  E3_UNSPECIFIED = 0;
+enum C3 {
+  C3_UNSPECIFIED = 0;
   // Rodoviário
-  E3_1 = 1;
+  C3_1 = 1;
   // Aéreo
-  E3_3 = 3;
+  C3_3 = 3;
   // Ferroviário
-  E3_5 = 5;
+  C3_5 = 5;
   // Aquático
-  E3_7 = 7;
+  C3_7 = 7;
 }

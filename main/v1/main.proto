@@ -4,11 +4,11 @@ syntax = "proto3";
 package main.v1;
 
 import "google/protobuf/timestamp.proto";
-import "occurrence_codes/f1/v1/e1.proto";
+import "occurrence_codes/c1/v1/c1.proto";
 
 message NaturalRisks {
   oneof family {
-    occurrence_codes.f1.v1.E1 e1 = 1;
+    occurrence_codes.c1.v1.C1 c1 = 1;
   }
 }
 
