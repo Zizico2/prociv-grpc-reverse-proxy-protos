@@ -7,13 +7,13 @@ enum C5 {
   // Radiológicos, dentro de uma instalação
   C5_1 = 1;
   // Químicos, dentro de uma instalação
-  C5_3 = 3;
+  C5_3 = 2;
   // Biológicos, dentro de uma instalação
-  C5_5 = 5;
+  C5_5 = 3;
   // Radiológicos, em trânsito
-  C5_7 = 7;
+  C5_7 = 4;
   // Químicos, em trânsito
-  C5_9 = 9;
+  C5_9 = 5;
   // Biológicos, em trânsito
-  C5_11 = 11;
+  C5_11 = 6;
 }

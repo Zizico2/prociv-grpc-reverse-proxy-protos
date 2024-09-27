@@ -6,15 +6,15 @@ package occurrence.c4.v1;
 enum C3 {
   C3_UNSPECIFIED = 0;
   // Busca e resgate terrestre de pessoas
-  C3_27 = 27;
+  C3_27 = 1;
   // Busca e resgate aquático de pessoas
-  C3_29 = 29;
+  C3_29 = 2;
   // Busca e resgate terrestre de animais
-  C3_31 = 31;
+  C3_31 = 3;
   // Busca e resgate aquático de animais
-  C3_33 = 33;
+  C3_33 = 4;
   // Prevenção a queimadas
-  C3_35 = 35;
+  C3_35 = 5;
   // Corte ou remoção de elementos em perigo de queda
-  C3_39 = 39;
+  C3_39 = 6;
 }

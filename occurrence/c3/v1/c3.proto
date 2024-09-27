@@ -3,30 +3,30 @@ syntax = "proto3";
 package occurrence.c3.v1;
 
 // Comprometimento total ou parcial de segurança, serviços ou estruturas
-enum C2 {
-  C2_UNSPECIFIED = 0;
+enum C3 {
+  C3_UNSPECIFIED = 0;
   // Queda de árvore
-  C2_1 = 1;
+  C3_1 = 1;
   // Desabamento de estruturas edificadas
-  C2_9 = 9;
+  C3_9 = 2;
   // Queda de elementos de construção em estruturas edificadas
-  C2_11 = 11;
+  C3_11 = 3;
   // Movimento de massa
-  C2_13 = 13;
+  C3_13 = 4;
   // Inundação de estruturas ou superfícies por precipitação intensa
-  C2_15 = 15;
+  C3_15 = 5;
   // Dano ou queda de redes de fornecimento elétrico
-  C2_21 = 21;
+  C3_21 = 6;
   // Dano em redes de abastecimento de água
-  C2_23 = 23;
+  C3_23 = 7;
   // Dano em redes de abastecimento de gás
-  C2_25 = 25;
+  C3_25 = 8;
   // Dano em oleodutos e gasodutos
-  C2_27 = 27;
+  C3_27 = 9;
   // Queda de estruturas temporárias ou móveis
-  C2_29 = 29;
+  C3_29 = 10;
   // Colapso de galerias e cavidades artificiais
-  C2_31 = 31;
+  C3_31 = 11;
   // Rutura de barragens
-  C2_33 = 33;
+  C3_33 = 12;
 }

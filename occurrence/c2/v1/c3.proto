@@ -8,9 +8,9 @@ enum C3 {
   // Rodoviário
   C3_1 = 1;
   // Aéreo
-  C3_3 = 3;
+  C3_3 = 2;
   // Ferroviário
-  C3_5 = 5;
+  C3_5 = 3;
   // Aquático
-  C3_7 = 7;
+  C3_7 = 4;
 }

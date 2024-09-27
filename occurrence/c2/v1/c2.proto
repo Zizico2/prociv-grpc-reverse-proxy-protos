@@ -8,5 +8,5 @@ enum C2 {
   // Equipamentos
   C2_1 = 1;
   // Produtos
-  C2_3 = 3;
+  C2_3 = 2;
 }

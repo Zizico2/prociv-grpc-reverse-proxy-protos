@@ -8,27 +8,27 @@ enum C1 {
   // Habitacional
   C1_1 = 1;
   // Serviços administrativos
-  C1_7 = 7;
+  C1_7 = 2;
   // Parque escolar
-  C1_9 = 9;
+  C1_9 = 3;
   // Hospitalares e lares de idosos
-  C1_11 = 11;
+  C1_11 = 4;
   // Espetáculos e reuniões públicas
-  C1_13 = 13;
+  C1_13 = 5;
   // Hotelaria e restauração
-  C1_15 = 15;
+  C1_15 = 6;
   // Áreas comerciais e gares de transporte
-  C1_17 = 17;
+  C1_17 = 7;
   // Desporto e lazer
-  C1_19 = 19;
+  C1_19 = 8;
   // Museus e galerias de arte
-  C1_21 = 21;
+  C1_21 = 9;
   // Bibliotecas e arquivos
-  C1_23 = 23;
+  C1_23 = 10;
   // Militar, forças de segurança e forças de socorro
-  C1_25 = 25;
+  C1_25 = 11;
   // Indústria, oficina e armazém
-  C1_27 = 27;
+  C1_27 = 12;
   // Edifícios degradados ou devolutos
-  C1_29 = 29;
+  C1_29 = 13;
 }

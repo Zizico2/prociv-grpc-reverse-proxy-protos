@@ -8,9 +8,9 @@ enum C2 {
   // Ameaça de explosão
   C2_1 = 1;
   // Explosão
-  C2_3 = 3;
+  C2_3 = 2;
   // Suicídio/homicídio na forma tentada
-  C2_7 = 7;
+  C2_7 = 3;
   // Suicídio/homicídio consumado
-  C2_9 = 9;
+  C2_9 = 4;
 }
