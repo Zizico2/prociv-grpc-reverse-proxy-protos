@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+// Incêndios em transportes
+package occurrence_codes.f2.v1;
+
+// Acidentes
+enum E4 {
+  E4_UNSPECIFIED = 0;
+  // Atropelamento rodoviário
+  E4_1 = 1;
+  // Colisão rodoviária
+  E4_3 = 3;
+  // Acidentes com veículos fora de estrada
+  E4_5 = 5;
+  // Despiste
+  E4_7 = 7;
+  // Acidente aéreo
+  E4_9 = 9;
+  // Atropelamento ferroviário
+  E4_11 = 11;
+  // Abalroamento ferroviário
+  E4_13 = 13;
+  // Choque entre veículos ou composições ferroviárias
+  E4_15 = 15;
+  // Descarrilamento ferroviário
+  E4_17 = 17;
+  // Afundamento ou abalroamento
+  E4_19 = 19;
+  // Encalhe
+  E4_21 = 21;
+  // Colisão aquática
+  E4_23 = 23;
+  // Abalroamento aquático
+  E4_25 = 25;
+}

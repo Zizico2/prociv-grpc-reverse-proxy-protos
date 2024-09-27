@@ -4,14 +4,14 @@ syntax = "proto3";
 package occurrence_codes.f2.v1;
 
 // Incêndios em transportes
-enum T3 {
-  T3_UNSPECIFIED = 0;
+enum E3 {
+  E3_UNSPECIFIED = 0;
   // Rodoviário
-  T3_1 = 1;
+  E3_1 = 1;
   // Aéreo
-  T3_3 = 3;
+  E3_3 = 3;
   // Ferroviário
-  T3_5 = 5;
+  E3_5 = 5;
   // Aquático
-  T3_7 = 7;
+  E3_7 = 7;
 }
