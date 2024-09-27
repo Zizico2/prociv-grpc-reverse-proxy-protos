@@ -1,9 +1,7 @@
 syntax = "proto3";
 
-// Acidentes industriais e tecnológicos
 package occurrence_codes.c2.v1;
 
-// Acidentes industriais e tecnológicos
 enum C5 {
   C5_UNSPECIFIED = 0;
   // Radiológicos, dentro de uma instalação

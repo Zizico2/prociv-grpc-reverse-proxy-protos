@@ -1,6 +1,5 @@
 syntax = "proto3";
 
-// Fenómenos naturais
 package occurrence_codes.c1.v1;
 
 // Fenómenos naturais

@@ -1,6 +1,5 @@
 syntax = "proto3";
 
-// Incêndios em equipamentos e produtos
 package occurrence_codes.c2.v1;
 
 // Incêndios urbanos ou em área urbanizável
