@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package occurrence_codes.c4.v1;
+
+// Assistência em saúde e intervenção em conflitos legais
+enum C1 {
+  C1_UNSPECIFIED = 0;
+  // Pré-afogamento
+  C1_11 = 11;
+  // Afogamento
+  C1_13 = 13;
+}

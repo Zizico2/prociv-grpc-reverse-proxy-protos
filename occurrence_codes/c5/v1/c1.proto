@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package occurrence_codes.c5.v1;
+
+// Fenómenos naturais
+enum C1 {
+  C1_UNSPECIFIED = 0;
+  // Cheia
+  C1_3 = 3;
+}

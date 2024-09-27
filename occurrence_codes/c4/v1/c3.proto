@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package occurrence_codes.c4.v1;
+
+// Assistência e prevenção de atividades humanas
+enum C3 {
+  C3_UNSPECIFIED = 0;
+  // Busca e resgate terrestre de pessoas
+  C3_27 = 27;
+  // Busca e resgate aquático de pessoas
+  C3_29 = 29;
+  // Busca e resgate terrestre de animais
+  C3_31 = 31;
+  // Busca e resgate aquático de animais
+  C3_33 = 33;
+  // Prevenção a queimadas
+  C3_35 = 35;
+  // Corte ou remoção de elementos em perigo de queda
+  C3_39 = 39;
+}
