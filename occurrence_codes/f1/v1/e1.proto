@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+// Portugal
+package occurrence_codes.f1.v1;
+
+// Fenómenos naturais
+enum E1 {
+  E1_UNSPECIFIED = 0;
+  // Cheia
+  E1_1 = 1;
+  // Ventos fortes
+  E1_3 = 3;
+  // Sismo
+  E1_5 = 5;
+  // Nevões
+  E1_7 = 7;
+  // Ondas de calor
+  E1_8 = 9;
+  // Ondas de frio
+  E1_11 = 11;
+  // Secas
+  E1_13 = 13;
+  // Colapso de cavidades subterrâneas naturais
+  E1_19 = 19;
+  // Enxurrada/aluvião
+  E1_25 = 25;
+}
