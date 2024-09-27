@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+// Incêndios em equipamentos e produtos
+package occurrence_codes.f2.v1;
+
+// Incêndios urbanos ou em área urbanizável
+enum E1 {
+  E1_UNSPECIFIED = 0;
+  // Habitacional
+  E1_1 = 1;
+  // Serviços administrativos
+  E1_7 = 7;
+  // Parque escolar
+  E1_9 = 9;
+  // Hospitalares e lares de idosos
+  E1_11 = 11;
+  // Espetáculos e reuniões públicas
+  E1_13 = 13;
+  // Hotelaria e restauração
+  E1_15 = 15;
+  // Áreas comerciais e gares de transporte
+  E1_17 = 17;
+  // Desporto e lazer
+  E1_19 = 19;
+  // Museus e galerias de arte
+  E1_21 = 21;
+  // Bibliotecas e arquivos
+  E1_23 = 23;
+  // Militar, forças de segurança e forças de socorro
+  E1_25 = 25;
+  // Indústria, oficina e armazém
+  E1_27 = 27;
+  // Edifícios degradados ou devolutos
+  E1_29 = 29;
+}

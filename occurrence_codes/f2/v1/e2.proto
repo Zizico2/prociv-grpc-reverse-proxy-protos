@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+// Incêndios em equipamentos e produtos
+package occurrence_codes.f2.v1;
+
+// Incêndios em equipamentos e produtos
+enum E2 {
+  E2_UNSPECIFIED = 0;
+  // Equipamentos
+  E2_1 = 1;
+  // Produtos
+  E2_3 = 3;
+}
