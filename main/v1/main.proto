@@ -86,7 +86,7 @@ enum IndustrialAccident {
   INDUSTRIAL_ACCIDENT_BIOLOGICAL_IN_TRANSIT = 11;
 }
 
-message TechnogicalRisks {
+message TechnologicalRisks {
   oneof family {
     UrbanFire urban_fire = 1;
     EquipmentAndProductsFire equipment_and_products_fire = 2;
@@ -191,7 +191,7 @@ message OperationsAndAlertStates {
 message OccurrenceKind {
   oneof kind {
     NaturalRisks natural_risks = 1;
-    TechnogicalRisks technological_risks = 2;
+    TechnologicalRisks technological_risks = 2;
     MixedRisks mixed_risks = 3;
     ProtectionAndAssitanceOfGoodsAndPeople protection_and_assitance_of_goods_and_people = 4;
     OperationsAndAlertStates operations_and_alert_states = 9;
