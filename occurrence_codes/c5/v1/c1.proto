@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package occurrence_codes.c5.v1;
 
-// Fenómenos naturais
+// Operações e estados de alerta
 enum C1 {
   C1_UNSPECIFIED = 0;
-  // Cheia
+  // Pré-posicionamento de meios DECIR
   C1_3 = 3;
 }
