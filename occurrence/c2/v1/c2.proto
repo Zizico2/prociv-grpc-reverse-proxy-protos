@@ -6,7 +6,7 @@ package occurrence.c2.v1;
 enum C2 {
   C2_UNSPECIFIED = 0;
   // Equipamentos
-  C2_1 = 1;
+  C2_C1 = 1;
   // Produtos
-  C2_3 = 2;
+  C2_C3 = 2;
 }

@@ -6,11 +6,11 @@ package occurrence.c2.v1;
 enum C3 {
   C3_UNSPECIFIED = 0;
   // Rodoviário
-  C3_1 = 1;
+  C3_C1 = 1;
   // Aéreo
-  C3_3 = 2;
+  C3_C3 = 2;
   // Ferroviário
-  C3_5 = 3;
+  C3_C5 = 3;
   // Aquático
-  C3_7 = 4;
+  C3_C7 = 4;
 }

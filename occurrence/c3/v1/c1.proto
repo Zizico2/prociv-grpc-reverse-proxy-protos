@@ -7,15 +7,15 @@ package occurrence.c3.v1;
 enum C1 {
   C1_UNSPECIFIED = 0;
   // Povoamento florestal
-  C1_1 = 1;
+  C1_C1 = 1;
   // Mato
-  C1_3 = 2;
+  C1_C3 = 2;
   // Agrícola
-  C1_5 = 3;
+  C1_C5 = 3;
   // Consolidação de rescaldo
-  C1_7 = 4;
+  C1_C7 = 4;
   // Gestão de combustível
-  C1_9 = 5;
+  C1_C9 = 5;
   // Queima
-  C1_11 = 6;
+  C1_C11 = 6;
 }

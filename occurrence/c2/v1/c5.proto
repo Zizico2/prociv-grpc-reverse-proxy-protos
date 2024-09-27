@@ -5,15 +5,15 @@ package occurrence.c2.v1;
 enum C5 {
   C5_UNSPECIFIED = 0;
   // Radiológicos, dentro de uma instalação
-  C5_1 = 1;
+  C5_C1 = 1;
   // Químicos, dentro de uma instalação
-  C5_3 = 2;
+  C5_C3 = 2;
   // Biológicos, dentro de uma instalação
-  C5_5 = 3;
+  C5_C5 = 3;
   // Radiológicos, em trânsito
-  C5_7 = 4;
+  C5_C7 = 4;
   // Químicos, em trânsito
-  C5_9 = 5;
+  C5_C9 = 5;
   // Biológicos, em trânsito
-  C5_11 = 6;
+  C5_C11 = 6;
 }

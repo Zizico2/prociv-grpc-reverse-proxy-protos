@@ -6,27 +6,27 @@ package occurrence.c3.v1;
 enum C3 {
   C3_UNSPECIFIED = 0;
   // Queda de árvore
-  C3_1 = 1;
+  C3_C1 = 1;
   // Desabamento de estruturas edificadas
-  C3_9 = 2;
+  C3_C9 = 2;
   // Queda de elementos de construção em estruturas edificadas
-  C3_11 = 3;
+  C3_C11 = 3;
   // Movimento de massa
-  C3_13 = 4;
+  C3_C13 = 4;
   // Inundação de estruturas ou superfícies por precipitação intensa
-  C3_15 = 5;
+  C3_C15 = 5;
   // Dano ou queda de redes de fornecimento elétrico
-  C3_21 = 6;
+  C3_C21 = 6;
   // Dano em redes de abastecimento de água
-  C3_23 = 7;
+  C3_C23 = 7;
   // Dano em redes de abastecimento de gás
-  C3_25 = 8;
+  C3_C25 = 8;
   // Dano em oleodutos e gasodutos
-  C3_27 = 9;
+  C3_C27 = 9;
   // Queda de estruturas temporárias ou móveis
-  C3_29 = 10;
+  C3_C29 = 10;
   // Colapso de galerias e cavidades artificiais
-  C3_31 = 11;
+  C3_C31 = 11;
   // Rutura de barragens
-  C3_33 = 12;
+  C3_C33 = 12;
 }
