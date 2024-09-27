@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package occurrence_codes.c4.v1;
+package occurrence_kind.c4.v1;
 
 // Assistência e prevenção de atividades humanas
 enum C3 {

@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package occurrence_codes.c5.v1;
+package occurrence_kind.c5.v1;
 
 // Operações e estados de alerta
 enum C1 {
