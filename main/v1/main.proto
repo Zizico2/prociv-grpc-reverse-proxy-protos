@@ -10,7 +10,7 @@ package main.v1;
 // import "occurrence/v1/c3.proto";
 // import "occurrence/v1/c4.proto";
 // import "occurrence/v1/c9.proto";
-// import "occurrence/v1/kind.proto";
+import "occurrence/v1/occurrence.proto";
 
 // message NaturalRisks {
 //   oneof family {
