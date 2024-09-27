@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 // Fenómenos naturais
-package occurrence_kind.c3.v1;
+package occurrence.c3.v1;
 
 // Incêndios rurais
 enum C1 {

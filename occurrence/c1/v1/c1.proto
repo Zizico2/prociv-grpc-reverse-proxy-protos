@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package occurrence_kind.c1.v1;
+package occurrence.c1.v1;
 
 // Fenómenos naturais
 enum C1 {
