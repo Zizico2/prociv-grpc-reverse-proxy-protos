@@ -4,309 +4,317 @@ syntax = "proto3";
 package main.v1;
 
 import "google/protobuf/timestamp.proto";
-import "occurrence/c1/v1/c1.proto";
+// import "occurrence/c1/v1/c1.proto";
+// import "occurrence/v1/c1.proto";
+// import "occurrence/v1/c2.proto";
+// import "occurrence/v1/c3.proto";
+// import "occurrence/v1/c4.proto";
+// import "occurrence/v1/c9.proto";
+import "occurrence/v1/kind.proto";
 
-message NaturalRisks {
-  oneof family {
-    occurrence.c1.v1.C1 c1 = 1;
-  }
-}
+// message NaturalRisks {
+//   oneof family {
+//     occurrence.c1.v1.C1 c1 = 1;
+//   }
+// }
 
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
+message Test {}
 
-enum UrbanFire {
-  URBAN_FIRE_UNSPECIFIED = 0;
-  URBAN_FIRE_RESIDENTIAL = 1;
-  URBAN_FIRE_ADMINISTRATIVE_SERVICES = 7;
-  URBAN_FIRE_SCHOOL_PARK = 9;
-  URBAN_FIRE_HOSPITAL = 11;
-  URBAN_FIRE_PUBLIC_EVENTS = 13;
-  URBAN_FIRE_HOTEL_RESTAURANT = 15;
-  URBAN_FIRE_COMMERCIAL_AREAS_TRANSPORT = 17;
-  URBAN_FIRE_SPORTS_AND_LEISURE = 19;
-  URBAN_FIRE_MUSEUM = 21;
-  URBAN_FIRE_LIBRARIES_ARCHIVES = 23;
-  URBAN_FIRE_MILITARY_SECURITY_FORCES = 25;
-  URBAN_FIRE_INDUSTRIAL_WAREHOUSE = 27;
-  URBAN_FIRE_DEGRADED_BUILDINGS = 29;
-}
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
 
-enum EquipmentAndProductsFire {
-  EQUIPMENT_AND_PRODUCTS_FIRE_UNSPECIFIED = 0;
-  EQUIPMENT_AND_PRODUCTS_FIRE_EQUIPMENT = 1;
-  EQUIPMENT_AND_PRODUCTS_FIRE_PRODUCTS = 3;
-}
+// enum UrbanFire {
+//   URBAN_FIRE_UNSPECIFIED = 0;
+//   URBAN_FIRE_RESIDENTIAL = 1;
+//   URBAN_FIRE_ADMINISTRATIVE_SERVICES = 7;
+//   URBAN_FIRE_SCHOOL_PARK = 9;
+//   URBAN_FIRE_HOSPITAL = 11;
+//   URBAN_FIRE_PUBLIC_EVENTS = 13;
+//   URBAN_FIRE_HOTEL_RESTAURANT = 15;
+//   URBAN_FIRE_COMMERCIAL_AREAS_TRANSPORT = 17;
+//   URBAN_FIRE_SPORTS_AND_LEISURE = 19;
+//   URBAN_FIRE_MUSEUM = 21;
+//   URBAN_FIRE_LIBRARIES_ARCHIVES = 23;
+//   URBAN_FIRE_MILITARY_SECURITY_FORCES = 25;
+//   URBAN_FIRE_INDUSTRIAL_WAREHOUSE = 27;
+//   URBAN_FIRE_DEGRADED_BUILDINGS = 29;
+// }
 
-enum TransportsFire {
-  TRANSPORTS_FIRE_UNSPECIFIED = 0;
-  TRANSPORTS_FIRE_ROAD = 1;
-  TRANSPORTS_FIRE_AIR = 3;
-  TRANSPORTS_FIRE_RAIL = 5;
-  TRANSPORTS_FIRE_WATER = 7;
-}
+// enum EquipmentAndProductsFire {
+//   EQUIPMENT_AND_PRODUCTS_FIRE_UNSPECIFIED = 0;
+//   EQUIPMENT_AND_PRODUCTS_FIRE_EQUIPMENT = 1;
+//   EQUIPMENT_AND_PRODUCTS_FIRE_PRODUCTS = 3;
+// }
 
-enum Accident {
-  ACCIDENT_UNSPECIFIED = 0;
-  ACCIDENT_ROAD_PEDESTRIAN_RUN_OVER = 1;
-  ACCIDENT_ROAD_COLLISION = 3;
-  ACCIDENT_OFF_ROAD = 5;
-  ACCIDENT_ROAD_CRASH = 7;
-  ACCIDENT_AIR = 9;
-  ACCIDENT_RAIL_PEDESTRIAN_RUN_OVER = 11;
-  ACCIDENT_RAIL_COLLISION = 13;
-  ACCIDENT_RAIL_CRASH = 15;
-  ACCIDENT_RAIL_DERAILMENT = 17;
-  ACCIDENT_SINKING_LISTING = 19;
-  ACCIDENT_GROUNDING = 21;
-  ACCIDENT_WATER_COLLISION = 23;
-  ACCIDENT_WATER_CRASH = 25;
-}
+// enum TransportsFire {
+//   TRANSPORTS_FIRE_UNSPECIFIED = 0;
+//   TRANSPORTS_FIRE_ROAD = 1;
+//   TRANSPORTS_FIRE_AIR = 3;
+//   TRANSPORTS_FIRE_RAIL = 5;
+//   TRANSPORTS_FIRE_WATER = 7;
+// }
 
-enum IndustrialAccident {
-  INDUSTRIAL_ACCIDENT_UNSPECIFIED = 0;
-  INDUSTRIAL_ACCIDENT_RADIOLOGICAL_ON_SITE = 1;
-  INDUSTRIAL_ACCIDENT_CHEMICAL_ON_SITE = 3;
-  INDUSTRIAL_ACCIDENT_BIOLOGICAL_ON_SITE = 5;
-  INDUSTRIAL_ACCIDENT_RADIOLOGICAL_IN_TRANSIT = 7;
-  INDUSTRIAL_ACCIDENT_CHEMICAL_IN_TRANSIT = 9;
-  INDUSTRIAL_ACCIDENT_BIOLOGICAL_IN_TRANSIT = 11;
-}
+// enum Accident {
+//   ACCIDENT_UNSPECIFIED = 0;
+//   ACCIDENT_ROAD_PEDESTRIAN_RUN_OVER = 1;
+//   ACCIDENT_ROAD_COLLISION = 3;
+//   ACCIDENT_OFF_ROAD = 5;
+//   ACCIDENT_ROAD_CRASH = 7;
+//   ACCIDENT_AIR = 9;
+//   ACCIDENT_RAIL_PEDESTRIAN_RUN_OVER = 11;
+//   ACCIDENT_RAIL_COLLISION = 13;
+//   ACCIDENT_RAIL_CRASH = 15;
+//   ACCIDENT_RAIL_DERAILMENT = 17;
+//   ACCIDENT_SINKING_LISTING = 19;
+//   ACCIDENT_GROUNDING = 21;
+//   ACCIDENT_WATER_COLLISION = 23;
+//   ACCIDENT_WATER_CRASH = 25;
+// }
 
-message TechnologicalRisks {
-  oneof family {
-    UrbanFire urban_fire = 1;
-    EquipmentAndProductsFire equipment_and_products_fire = 2;
-    TransportsFire transports_fire = 3;
-    Accident accident = 4;
-    IndustrialAccident industrial_accident = 5;
-  }
-}
+// enum IndustrialAccident {
+//   INDUSTRIAL_ACCIDENT_UNSPECIFIED = 0;
+//   INDUSTRIAL_ACCIDENT_RADIOLOGICAL_ON_SITE = 1;
+//   INDUSTRIAL_ACCIDENT_CHEMICAL_ON_SITE = 3;
+//   INDUSTRIAL_ACCIDENT_BIOLOGICAL_ON_SITE = 5;
+//   INDUSTRIAL_ACCIDENT_RADIOLOGICAL_IN_TRANSIT = 7;
+//   INDUSTRIAL_ACCIDENT_CHEMICAL_IN_TRANSIT = 9;
+//   INDUSTRIAL_ACCIDENT_BIOLOGICAL_IN_TRANSIT = 11;
+// }
 
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
+// message TechnologicalRisks {
+//   oneof family {
+//     UrbanFire urban_fire = 1;
+//     EquipmentAndProductsFire equipment_and_products_fire = 2;
+//     TransportsFire transports_fire = 3;
+//     Accident accident = 4;
+//     IndustrialAccident industrial_accident = 5;
+//   }
+// }
 
-enum RuralFire {
-  RURAL_FIRE_UNSPECIFIED = 0;
-  RURAL_FIRE_FOREST = 1;
-  RURAL_FIRE_BRUSH = 3;
-  RURAL_FIRE_AGRICULTURAL = 5;
-  RURAL_FIRE_REKINDLE_CONSOLIDATION = 7;
-  RURAL_FIRE_FUEL_MANAGEMENT = 9;
-  RURAL_FIRE_CONTROLLED_BURN = 11;
-}
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
 
-enum SecurityServicesStructuresCompromise {
-  SECURITY_SERVICES_STRUCTURES_COMPROMISE_UNSPECIFIED = 0;
-  SECURITY_SERVICES_STRUCTURES_COMPROMISE_TREE_FALL = 1;
-  SECURITY_SERVICES_STRUCTURES_COMPROMISE_BUILDING_COLLAPSE = 9;
-  SECURITY_SERVICES_STRUCTURES_COMPROMISE_BUILDING_ELEMENT_FALL = 11;
-  SECURITY_SERVICES_STRUCTURES_COMPROMISE_MASS_MOVEMENT = 13;
-  SECURITY_SERVICES_STRUCTURES_COMPROMISE_SURFACE_FLOODING = 15;
-  SECURITY_SERVICES_STRUCTURES_COMPROMISE_DAMAGE_TO_ELECTRICAL_GRIDS = 21;
-  SECURITY_SERVICES_STRUCTURES_COMPROMISE_DAMAGE_TO_WATER_SUPPLY_NETWORKS = 23;
-  SECURITY_SERVICES_STRUCTURES_COMPROMISE_DAMAGE_TO_GAS_SUPPLY_NETWORKS = 25;
-  SECURITY_SERVICES_STRUCTURES_COMPROMISE_DAMAGE_TO_OIL_AND_GAS_PIPELINES = 27;
-  SECURITY_SERVICES_STRUCTURES_COMPROMISE_TEMPORARY_STRUCTURE_COLLAPSE = 29;
-  SECURITY_SERVICES_STRUCTURES_COMPROMISE_ARTIFICIAL_GALLERY_COLLAPSE = 31;
-  SECURITY_SERVICES_STRUCTURES_COMPROMISE_DAM_RUPTURE = 33;
-}
+// enum RuralFire {
+//   RURAL_FIRE_UNSPECIFIED = 0;
+//   RURAL_FIRE_FOREST = 1;
+//   RURAL_FIRE_BRUSH = 3;
+//   RURAL_FIRE_AGRICULTURAL = 5;
+//   RURAL_FIRE_REKINDLE_CONSOLIDATION = 7;
+//   RURAL_FIRE_FUEL_MANAGEMENT = 9;
+//   RURAL_FIRE_CONTROLLED_BURN = 11;
+// }
 
-message MixedRisks {
-  oneof family {
-    RuralFire rural_fire = 1;
-    SecurityServicesStructuresCompromise security_services_structures_compromise = 3;
-  }
-}
+// enum SecurityServicesStructuresCompromise {
+//   SECURITY_SERVICES_STRUCTURES_COMPROMISE_UNSPECIFIED = 0;
+//   SECURITY_SERVICES_STRUCTURES_COMPROMISE_TREE_FALL = 1;
+//   SECURITY_SERVICES_STRUCTURES_COMPROMISE_BUILDING_COLLAPSE = 9;
+//   SECURITY_SERVICES_STRUCTURES_COMPROMISE_BUILDING_ELEMENT_FALL = 11;
+//   SECURITY_SERVICES_STRUCTURES_COMPROMISE_MASS_MOVEMENT = 13;
+//   SECURITY_SERVICES_STRUCTURES_COMPROMISE_SURFACE_FLOODING = 15;
+//   SECURITY_SERVICES_STRUCTURES_COMPROMISE_DAMAGE_TO_ELECTRICAL_GRIDS = 21;
+//   SECURITY_SERVICES_STRUCTURES_COMPROMISE_DAMAGE_TO_WATER_SUPPLY_NETWORKS = 23;
+//   SECURITY_SERVICES_STRUCTURES_COMPROMISE_DAMAGE_TO_GAS_SUPPLY_NETWORKS = 25;
+//   SECURITY_SERVICES_STRUCTURES_COMPROMISE_DAMAGE_TO_OIL_AND_GAS_PIPELINES = 27;
+//   SECURITY_SERVICES_STRUCTURES_COMPROMISE_TEMPORARY_STRUCTURE_COLLAPSE = 29;
+//   SECURITY_SERVICES_STRUCTURES_COMPROMISE_ARTIFICIAL_GALLERY_COLLAPSE = 31;
+//   SECURITY_SERVICES_STRUCTURES_COMPROMISE_DAM_RUPTURE = 33;
+// }
 
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
+// message MixedRisks {
+//   oneof family {
+//     RuralFire rural_fire = 1;
+//     SecurityServicesStructuresCompromise security_services_structures_compromise = 3;
+//   }
+// }
 
-enum HealthAssistance {
-  HEALTH_ASSISTANCE_UNSPECIFIED = 0;
-  HEALTH_ASSISTANCE_NEAR_DROWNING = 11;
-  HEALTH_ASSISTANCE_DROWNING = 13;
-}
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
 
-enum LegalConflictsIntervention {
-  LEGAL_CONFLICTS_INTERVENTION_UNSPECIFIED = 0;
-  LEGAL_CONFLICTS_INTERVENTION_EXPLOSION_THREAT = 1;
-  LEGAL_CONFLICTS_INTERVENTION_EXPLOSION = 3;
-  LEGAL_CONFLICTS_INTERVENTION_ATTEMPTED_SUICIDE_HOMICIDE = 7;
-  LEGAL_CONFLICTS_INTERVENTION_SUICIDE_HOMICIDE = 9;
-}
+// enum HealthAssistance {
+//   HEALTH_ASSISTANCE_UNSPECIFIED = 0;
+//   HEALTH_ASSISTANCE_NEAR_DROWNING = 11;
+//   HEALTH_ASSISTANCE_DROWNING = 13;
+// }
 
-enum AssistanceAndPreservationOfHumanActivities {
-  ASSISTANCE_AND_PRESERVATION_OF_HUMAN_ACTIVITIES_UNSPECIFIED = 0;
-  ASSISTANCE_AND_PRESERVATION_OF_HUMAN_ACTIVITIES_HUMAN_SEARCH_AND_RESCUE_LAND = 27;
-  ASSISTANCE_AND_PRESERVATION_OF_HUMAN_ACTIVITIES_HUMAN_SEARCH_AND_RESCUE_WATER = 29;
-  ASSISTANCE_AND_PRESERVATION_OF_HUMAN_ACTIVITIES_ANIMAL_SEARCH_AND_RESCUE_LAND = 31;
-  ASSISTANCE_AND_PRESERVATION_OF_HUMAN_ACTIVITIES_ANIMAL_SEARCH_AND_RESCUE_WATER = 33;
-  ASSISTANCE_AND_PRESERVATION_OF_HUMAN_ACTIVITIES_CONTROLLED_FIRE_PREVENTION = 35;
-  ASSISTANCE_AND_PRESERVATION_OF_HUMAN_ACTIVITIES_REMOVAL_OF_DANGEROUS_ELEMENTS = 39;
-}
+// enum LegalConflictsIntervention {
+//   LEGAL_CONFLICTS_INTERVENTION_UNSPECIFIED = 0;
+//   LEGAL_CONFLICTS_INTERVENTION_EXPLOSION_THREAT = 1;
+//   LEGAL_CONFLICTS_INTERVENTION_EXPLOSION = 3;
+//   LEGAL_CONFLICTS_INTERVENTION_ATTEMPTED_SUICIDE_HOMICIDE = 7;
+//   LEGAL_CONFLICTS_INTERVENTION_SUICIDE_HOMICIDE = 9;
+// }
 
-message ProtectionAndAssitanceOfGoodsAndPeople {
-  oneof family {
-    HealthAssistance health_assistance = 1;
-    LegalConflictsIntervention legal_conflicts_intervention = 2;
-    AssistanceAndPreservationOfHumanActivities assistance_and_preservation_of_human_activities = 3;
-  }
-}
+// enum AssistanceAndPreservationOfHumanActivities {
+//   ASSISTANCE_AND_PRESERVATION_OF_HUMAN_ACTIVITIES_UNSPECIFIED = 0;
+//   ASSISTANCE_AND_PRESERVATION_OF_HUMAN_ACTIVITIES_HUMAN_SEARCH_AND_RESCUE_LAND = 27;
+//   ASSISTANCE_AND_PRESERVATION_OF_HUMAN_ACTIVITIES_HUMAN_SEARCH_AND_RESCUE_WATER = 29;
+//   ASSISTANCE_AND_PRESERVATION_OF_HUMAN_ACTIVITIES_ANIMAL_SEARCH_AND_RESCUE_LAND = 31;
+//   ASSISTANCE_AND_PRESERVATION_OF_HUMAN_ACTIVITIES_ANIMAL_SEARCH_AND_RESCUE_WATER = 33;
+//   ASSISTANCE_AND_PRESERVATION_OF_HUMAN_ACTIVITIES_CONTROLLED_FIRE_PREVENTION = 35;
+//   ASSISTANCE_AND_PRESERVATION_OF_HUMAN_ACTIVITIES_REMOVAL_OF_DANGEROUS_ELEMENTS = 39;
+// }
 
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
+// message ProtectionAndAssitanceOfGoodsAndPeople {
+//   oneof family {
+//     HealthAssistance health_assistance = 1;
+//     LegalConflictsIntervention legal_conflicts_intervention = 2;
+//     AssistanceAndPreservationOfHumanActivities assistance_and_preservation_of_human_activities = 3;
+//   }
+// }
 
-enum Operations {
-  OPERATIONS_UNSPECIFIED = 0;
-  OPERATIONS_PRE_POSITIONING_DECIR = 1;
-}
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
 
-message OperationsAndAlertStates {
-  oneof family {
-    Operations operations = 1;
-  }
-}
+// enum Operations {
+//   OPERATIONS_UNSPECIFIED = 0;
+//   OPERATIONS_PRE_POSITIONING_DECIR = 1;
+// }
 
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
+// message OperationsAndAlertStates {
+//   oneof family {
+//     Operations operations = 1;
+//   }
+// }
 
-message OccurrenceKind {
-  oneof kind {
-    NaturalRisks natural_risks = 1;
-    TechnologicalRisks technological_risks = 2;
-    MixedRisks mixed_risks = 3;
-    ProtectionAndAssitanceOfGoodsAndPeople protection_and_assitance_of_goods_and_people = 4;
-    OperationsAndAlertStates operations_and_alert_states = 9;
-  }
-}
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
 
-message Occurrence {
-  OccurrenceKind kind = 1;
-  google.protobuf.Timestamp start_date = 2;
-  //
-  google.protobuf.Timestamp data_date = 3;
-  County county = 4;
-}
+// message OccurrenceKind {
+//   oneof kind {
+//     NaturalRisks natural_risks = 1;
+//     TechnologicalRisks technological_risks = 2;
+//     MixedRisks mixed_risks = 3;
+//     ProtectionAndAssitanceOfGoodsAndPeople protection_and_assitance_of_goods_and_people = 4;
+//     OperationsAndAlertStates operations_and_alert_states = 9;
+//   }
+// }
 
-enum County {
-  COUNTY_UNSPECIFIED = 0;
-}
+// message Occurrence {
+//   OccurrenceKind kind = 1;
+//   google.protobuf.Timestamp start_date = 2;
+//   //
+//   google.protobuf.Timestamp data_date = 3;
+//   County county = 4;
+// }
 
-enum GroupedStatus {
-  GROUPED_STATUS_UNSPECIFIED = 0;
-  GROUPED_STATUS_DISPATCHING = 1;
-  GROUPED_STATUS_ACTIVE = 2;
-  GROUPED_STATUS_RESOLVING = 3;
-  GROUPED_STATUS_CONCLUDING = 4;
-}
+// enum County {
+//   COUNTY_UNSPECIFIED = 0;
+// }
 
-enum OccurrenceStatus {
-  OCCURRENCE_STATUS_UNSPECIFIED = 0;
-  OCCURRENCE_STATUS_FIRST_DISPATCH = 1;
-  OCCURRENCE_STATUS_SITE_ARRIVAL = 2;
-  OCCURRENCE_STATUS_ACTIVE = 3;
-  OCCURRENCE_STATUS_RESOLVING = 4;
-  OCCURRENCE_STATUS_CONCLUDING = 5;
-  OCCURRENCE_STATUS_MONITORING = 6;
-}
+// enum GroupedStatus {
+//   GROUPED_STATUS_UNSPECIFIED = 0;
+//   GROUPED_STATUS_DISPATCHING = 1;
+//   GROUPED_STATUS_ACTIVE = 2;
+//   GROUPED_STATUS_RESOLVING = 3;
+//   GROUPED_STATUS_CONCLUDING = 4;
+// }
 
-enum CRPEC {
-  CRPEC_UNSPECIFIED = 0;
-  // COMANDO REGIONAL DE EMERGÊNCIA E PROTEÇÃO CIVIL DO NORTE
-  // "Norte"
-  CRPEC_NORTE = 1;
-  // COMANDO REGIONAL DE EMERGÊNCIA E PROTEÇÃO CIVIL DO CENTRO
-  // "Centro"
-  CRPEC_CENTRO = 2;
-  // COMANDO REGIONAL DE EMERGÊNCIA E PROTEÇÃO CIVIL DE LISBOA E VALE DO TEJO
-  // "Lisboa e Vale do Tejo"
-  CRPEC_LISBOA_E_VALE_DO_TEJO = 3;
-  // COMANDO REGIONAL DE EMERGÊNCIA E PROTEÇÃO CIVIL DO ALGARVE
-  // "Algarve"
-  CRPEC_ALGARVE = 4;
-  // COMANDO REGIONAL DE EMERGÊNCIA E PROTEÇÃO CIVIL DO ALENTEJO
-  // "Alentejo"
-  CRPEC_ALENTEJO = 5;
-}
+// enum OccurrenceStatus {
+//   OCCURRENCE_STATUS_UNSPECIFIED = 0;
+//   OCCURRENCE_STATUS_FIRST_DISPATCH = 1;
+//   OCCURRENCE_STATUS_SITE_ARRIVAL = 2;
+//   OCCURRENCE_STATUS_ACTIVE = 3;
+//   OCCURRENCE_STATUS_RESOLVING = 4;
+//   OCCURRENCE_STATUS_CONCLUDING = 5;
+//   OCCURRENCE_STATUS_MONITORING = 6;
+// }
 
-enum CSRPEC {
-  CSRPEC_UNSPECIFIED = 0;
-  // Comando Sub-Regional do Alto Minho
-  // ANEPC: "Alto Minho"
-  CSRPEC_ALTO_MINHO = 1;
-  // Comando Sub-Regional do Alto Tâmega e Barroso
-  // ANEPC: "Alto Tâmega e Barroso"
-  CSRPEC_ALTO_TAMEGA_E_BARROSO = 2;
-  // Comando Sub-Regional da Área Metropolitana do Porto
-  // ANEPC: "Area M. Porto"
-  CSRPEC_AREA_METROPOLITANA_DO_PORTO = 3;
-  // Comando Sub-Regional do Ave
-  // ANEPC: "Ave"
-  CSRPEC_AVE = 4;
-  // Comando Sub-Regional do Cávado
-  // ANEPC: "Cávado"
-  CSRPEC_CAVADO = 5;
-  // Comando Sub-Regional do Douro
-  // ANEPC: "Douro"
-  CSRPEC_DOURO = 6;
-  // Comando Sub-Regional do Tâmega e Sousa
-  // ANEPC: "Tâmega e Sousa"
-  CSRPEC_TAMEGA_E_SOUSA = 7;
-  // Comando Sub-Regional das Terras de Trás-os-Montes
-  // ANEPC: "Terras de Trás-os-Montes"
-  CSRPEC_TERRAS_DE_TRAS_OS_MONTES = 8;
-  // Comando Sub-Regional da Beira Baixa
-  // ANEPC: "Beira Baixa" ???
-  CSRPEC_BEIRA_BAIXA = 9;
-  // Comando Sub-Regional das Beiras e Serra da Estrela
-  // ANEPC: "Beiras e Serra da Estrela"
-  CSRPEC_BEIRAS_E_SERRA_DA_ESTRELA = 10;
-  // Comando Sub-Regional da Região de Aveiro
-  // ANEPC: "Região de Aveiro"
-  CSRPEC_REGIAO_DE_AVEIRO = 11;
-  // Comando Sub-Regional da Região de Coimbra
-  // ANEPC: "Região de Coimbra"
-  CSRPEC_REGIAO_DE_COIMBRA = 12;
-  // Comando Sub-Regional da Região de Leiria
-  // ANEPC: "Região de Leiria"
-  CSRPEC_REGIAO_DE_LEIRIA = 13;
-  // Comando Sub-Regional de Viseu Dão Lafões
-  // ANEPC: "Viseu Dão Lafões"
-  CSRPEC_VISEU_DAO_LAFOES = 14;
-  // Comando Sub-Regional da Grande Lisboa
-  // ANEPC: "Grande Lisboa"
-  CSRPEC_GRANDE_LISBOA = 15;
-  // Comando Sub-Regional da Península de Setúbal
-  // ANEPC: "Península de Setúbal"
-  CSRPEC_PENINSULA_DE_SETUBAL = 16;
-  // Comando Sub-Regional da Lezíria do Tejo
-  // ANEPC: "Lezíria do Tejo"
-  CSRPEC_LEZIRIA_DO_TEJO = 17;
-  // Comando Sub-Regional do Médio Tejo
-  // ANEPC: "Médio Tejo" ???
-  CSRPEC_MEDIO_TEJO = 18;
-  // Comando Sub-Regional do Oeste
-  // ANEPC: "Oeste"
-  CSRPEC_OESTE = 19;
-  // Comando Sub-Regional do Alentejo Central
-  // ANEPC: "Alentejo Central" ???
-  CSRPEC_ALENTEJO_CENTRAL = 20;
-  // Comando Sub-Regional do Alentejo Litoral
-  // ANEPC: "Alentejo Litoral" ???
-  CSRPEC_ALENTEJO_LITORAL = 21;
-  // Comando Sub-Regional do Alto Alentejo
-  // ANEPC: "Alto Alentejo" ???
-  CSRPEC_ALTO_ALENTEJO = 22;
-  // Comando Sub-Regional do Baixo Alentejo
-  // ANEPC: "Baixo Alentejo"
-  CSRPEC_BAIXO_ALENTEJO = 23;
-  // Comando Sub-Regional do Algarve
-  // ANEPC: "Algarve"
-  CSRPEC_BAIXO_ALGARVE = 24;
-}
+// enum CRPEC {
+//   CRPEC_UNSPECIFIED = 0;
+//   // COMANDO REGIONAL DE EMERGÊNCIA E PROTEÇÃO CIVIL DO NORTE
+//   // "Norte"
+//   CRPEC_NORTE = 1;
+//   // COMANDO REGIONAL DE EMERGÊNCIA E PROTEÇÃO CIVIL DO CENTRO
+//   // "Centro"
+//   CRPEC_CENTRO = 2;
+//   // COMANDO REGIONAL DE EMERGÊNCIA E PROTEÇÃO CIVIL DE LISBOA E VALE DO TEJO
+//   // "Lisboa e Vale do Tejo"
+//   CRPEC_LISBOA_E_VALE_DO_TEJO = 3;
+//   // COMANDO REGIONAL DE EMERGÊNCIA E PROTEÇÃO CIVIL DO ALGARVE
+//   // "Algarve"
+//   CRPEC_ALGARVE = 4;
+//   // COMANDO REGIONAL DE EMERGÊNCIA E PROTEÇÃO CIVIL DO ALENTEJO
+//   // "Alentejo"
+//   CRPEC_ALENTEJO = 5;
+// }
+
+// enum CSRPEC {
+//   CSRPEC_UNSPECIFIED = 0;
+//   // Comando Sub-Regional do Alto Minho
+//   // ANEPC: "Alto Minho"
+//   CSRPEC_ALTO_MINHO = 1;
+//   // Comando Sub-Regional do Alto Tâmega e Barroso
+//   // ANEPC: "Alto Tâmega e Barroso"
+//   CSRPEC_ALTO_TAMEGA_E_BARROSO = 2;
+//   // Comando Sub-Regional da Área Metropolitana do Porto
+//   // ANEPC: "Area M. Porto"
+//   CSRPEC_AREA_METROPOLITANA_DO_PORTO = 3;
+//   // Comando Sub-Regional do Ave
+//   // ANEPC: "Ave"
+//   CSRPEC_AVE = 4;
+//   // Comando Sub-Regional do Cávado
+//   // ANEPC: "Cávado"
+//   CSRPEC_CAVADO = 5;
+//   // Comando Sub-Regional do Douro
+//   // ANEPC: "Douro"
+//   CSRPEC_DOURO = 6;
+//   // Comando Sub-Regional do Tâmega e Sousa
+//   // ANEPC: "Tâmega e Sousa"
+//   CSRPEC_TAMEGA_E_SOUSA = 7;
+//   // Comando Sub-Regional das Terras de Trás-os-Montes
+//   // ANEPC: "Terras de Trás-os-Montes"
+//   CSRPEC_TERRAS_DE_TRAS_OS_MONTES = 8;
+//   // Comando Sub-Regional da Beira Baixa
+//   // ANEPC: "Beira Baixa" ???
+//   CSRPEC_BEIRA_BAIXA = 9;
+//   // Comando Sub-Regional das Beiras e Serra da Estrela
+//   // ANEPC: "Beiras e Serra da Estrela"
+//   CSRPEC_BEIRAS_E_SERRA_DA_ESTRELA = 10;
+//   // Comando Sub-Regional da Região de Aveiro
+//   // ANEPC: "Região de Aveiro"
+//   CSRPEC_REGIAO_DE_AVEIRO = 11;
+//   // Comando Sub-Regional da Região de Coimbra
+//   // ANEPC: "Região de Coimbra"
+//   CSRPEC_REGIAO_DE_COIMBRA = 12;
+//   // Comando Sub-Regional da Região de Leiria
+//   // ANEPC: "Região de Leiria"
+//   CSRPEC_REGIAO_DE_LEIRIA = 13;
+//   // Comando Sub-Regional de Viseu Dão Lafões
+//   // ANEPC: "Viseu Dão Lafões"
+//   CSRPEC_VISEU_DAO_LAFOES = 14;
+//   // Comando Sub-Regional da Grande Lisboa
+//   // ANEPC: "Grande Lisboa"
+//   CSRPEC_GRANDE_LISBOA = 15;
+//   // Comando Sub-Regional da Península de Setúbal
+//   // ANEPC: "Península de Setúbal"
+//   CSRPEC_PENINSULA_DE_SETUBAL = 16;
+//   // Comando Sub-Regional da Lezíria do Tejo
+//   // ANEPC: "Lezíria do Tejo"
+//   CSRPEC_LEZIRIA_DO_TEJO = 17;
+//   // Comando Sub-Regional do Médio Tejo
+//   // ANEPC: "Médio Tejo" ???
+//   CSRPEC_MEDIO_TEJO = 18;
+//   // Comando Sub-Regional do Oeste
+//   // ANEPC: "Oeste"
+//   CSRPEC_OESTE = 19;
+//   // Comando Sub-Regional do Alentejo Central
+//   // ANEPC: "Alentejo Central" ???
+//   CSRPEC_ALENTEJO_CENTRAL = 20;
+//   // Comando Sub-Regional do Alentejo Litoral
+//   // ANEPC: "Alentejo Litoral" ???
+//   CSRPEC_ALENTEJO_LITORAL = 21;
+//   // Comando Sub-Regional do Alto Alentejo
+//   // ANEPC: "Alto Alentejo" ???
+//   CSRPEC_ALTO_ALENTEJO = 22;
+//   // Comando Sub-Regional do Baixo Alentejo
+//   // ANEPC: "Baixo Alentejo"
+//   CSRPEC_BAIXO_ALENTEJO = 23;
+//   // Comando Sub-Regional do Algarve
+//   // ANEPC: "Algarve"
+//   CSRPEC_BAIXO_ALGARVE = 24;
+// }
