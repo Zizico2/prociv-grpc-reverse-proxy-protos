@@ -5,22 +5,32 @@ package main.v1;
 
 import "google/protobuf/timestamp.proto";
 
-enum NaturalPhenomenon {
-  NATURAL_PHENOMENON_UNSPECIFIED = 0;
-  NATURAL_PHENOMENON_FLOOD = 1;
-  NATURAL_PHENOMENON_STRONG_WINDS = 3;
-  NATURAL_PHENOMENON_EARTHQUAKE = 5;
-  NATURAL_PHENOMENON_SNOWSTORM = 7;
-  NATURAL_PHENOMENON_HEAT_WAVES = 9;
-  NATURAL_PHENOMENON_COLD_WAVES = 11;
-  NATURAL_PHENOMENON_DROUGHTS = 13;
-  NATURAL_PHENOMENON_COLLAPSE_OF_UNDERGROUND_CAVITIES = 19;
-  NATURAL_PHENOMENON_LANDSLIDE = 25;
+// Fenómenos naturais
+enum T1 {
+  T1_UNSPECIFIED = 0;
+  // Cheia
+  T1_1 = 1;
+  // Ventos fortes
+  T1_3 = 3;
+  // Sismo
+  T1_5 = 5;
+  // Nevões
+  T1_7 = 7;
+  // Ondas de calor
+  T1_8 = 9;
+  // Ondas de frio
+  T1_11 = 11;
+  // Secas
+  T1_13 = 13;
+  // Colapso de cavidades subterrâneas naturais
+  T1_19 = 19;
+  // Enxurrada/aluvião
+  T1_25 = 25;
 }
 
 message NaturalRisks {
   oneof family {
-    NaturalPhenomenon natural_phenomenon = 1;
+    T1 t1 = 1;
   }
 }
 
