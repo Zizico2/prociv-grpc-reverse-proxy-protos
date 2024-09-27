@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-// Incêndios em transportes
+// Acidentes
 package occurrence_codes.c2.v1;
 
 // Acidentes

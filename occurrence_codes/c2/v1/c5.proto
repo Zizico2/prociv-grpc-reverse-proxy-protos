@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+// Acidentes industriais e tecnológicos
+package occurrence_codes.c2.v1;
+
+// Acidentes industriais e tecnológicos
+enum C5 {
+  C5_UNSPECIFIED = 0;
+  // Radiológicos, dentro de uma instalação
+  C5_1 = 1;
+  // Químicos, dentro de uma instalação
+  C5_3 = 3;
+  // Biológicos, dentro de uma instalação
+  C5_5 = 5;
+  // Radiológicos, em trânsito
+  C5_7 = 7;
+  // Químicos, em trânsito
+  C5_9 = 9;
+  // Biológicos, em trânsito
+  C5_11 = 11;
+}
