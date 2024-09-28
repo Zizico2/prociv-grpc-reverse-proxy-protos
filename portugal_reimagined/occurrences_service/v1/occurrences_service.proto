@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package portugal_reimagined.occurrences_service.v1;
+
+import "occurrence/v1/occurrence.proto";
+
+service MyOccurrencesService {
+  rpc ListOccurrences(ListOccurrencesRequest) returns (stream ListOccurrencesResponse);
+}
+
+message ListOccurrencesRequest {}
+message ListOccurrencesResponse {
+  occurrence.v1.Occurrence occurrence = 1;
+}
