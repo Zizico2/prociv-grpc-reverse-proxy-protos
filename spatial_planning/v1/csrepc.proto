@@ -5,75 +5,51 @@ package spatial_planning.v1;
 enum CSREPC {
   CSREPC_UNSPECIFIED = 0;
   // Comando Sub-Regional do Alto Minho
-  // ANEPC: "Alto Minho"
-  CSREPC_ALTO_MINHO = 1;
+  CSREPC_C1 = 1;
   // Comando Sub-Regional do Alto Tâmega e Barroso
-  // ANEPC: "Alto Tâmega e Barroso"
-  CSREPC_ALTO_TAMEGA_E_BARROSO = 2;
+  CSREPC_C2 = 2;
   // Comando Sub-Regional da Área Metropolitana do Porto
-  // ANEPC: "Area M. Porto"
-  CSREPC_AREA_METROPOLITANA_DO_PORTO = 3;
+  CSREPC_C3 = 3;
   // Comando Sub-Regional do Ave
-  // ANEPC: "Ave"
-  CSREPC_AVE = 4;
+  CSREPC_C4 = 4;
   // Comando Sub-Regional do Cávado
-  // ANEPC: "Cávado"
-  CSREPC_CAVADO = 5;
+  CSREPC_C5 = 5;
   // Comando Sub-Regional do Douro
-  // ANEPC: "Douro"
-  CSREPC_DOURO = 6;
+  CSREPC_C6 = 6;
   // Comando Sub-Regional do Tâmega e Sousa
-  // ANEPC: "Tâmega e Sousa"
-  CSREPC_TAMEGA_E_SOUSA = 7;
+  CSREPC_C7 = 7;
   // Comando Sub-Regional das Terras de Trás-os-Montes
-  // ANEPC: "Terras de Trás-os-Montes"
-  CSREPC_TERRAS_DE_TRAS_OS_MONTES = 8;
+  CSREPC_C8 = 8;
   // Comando Sub-Regional da Beira Baixa
-  // ANEPC: "Beira Baixa" ???
-  CSREPC_BEIRA_BAIXA = 9;
+  CSREPC_C9 = 9;
   // Comando Sub-Regional das Beiras e Serra da Estrela
-  // ANEPC: "Beiras e Serra da Estrela"
-  CSREPC_BEIRAS_E_SERRA_DA_ESTRELA = 10;
+  CSREPC_C10 = 10;
   // Comando Sub-Regional da Região de Aveiro
-  // ANEPC: "Região de Aveiro"
-  CSREPC_REGIAO_DE_AVEIRO = 11;
+  CSREPC_C11 = 11;
   // Comando Sub-Regional da Região de Coimbra
-  // ANEPC: "Região de Coimbra"
-  CSREPC_REGIAO_DE_COIMBRA = 12;
+  CSREPC_C12 = 12;
   // Comando Sub-Regional da Região de Leiria
-  // ANEPC: "Região de Leiria"
-  CSREPC_REGIAO_DE_LEIRIA = 13;
+  CSREPC_C13 = 13;
   // Comando Sub-Regional de Viseu Dão Lafões
-  // ANEPC: "Viseu Dão Lafões"
-  CSREPC_VISEU_DAO_LAFOES = 14;
+  CSREPC_C14 = 14;
   // Comando Sub-Regional da Grande Lisboa
-  // ANEPC: "Grande Lisboa"
-  CSREPC_GRANDE_LISBOA = 15;
+  CSREPC_C15 = 15;
   // Comando Sub-Regional da Península de Setúbal
-  // ANEPC: "Península de Setúbal"
-  CSREPC_PENINSULA_DE_SETUBAL = 16;
+  CSREPC_C16 = 16;
   // Comando Sub-Regional da Lezíria do Tejo
-  // ANEPC: "Lezíria do Tejo"
-  CSREPC_LEZIRIA_DO_TEJO = 17;
+  CSREPC_C17 = 17;
   // Comando Sub-Regional do Médio Tejo
-  // ANEPC: "Médio Tejo" ???
-  CSREPC_MEDIO_TEJO = 18;
+  CSREPC_C18 = 18;
   // Comando Sub-Regional do Oeste
-  // ANEPC: "Oeste"
-  CSREPC_OESTE = 19;
+  CSREPC_C19 = 19;
   // Comando Sub-Regional do Alentejo Central
-  // ANEPC: "Alentejo Central" ???
-  CSREPC_ALENTEJO_CENTRAL = 20;
+  CSREPC_C20 = 20;
   // Comando Sub-Regional do Alentejo Litoral
-  // ANEPC: "Alentejo Litoral" ???
-  CSREPC_ALENTEJO_LITORAL = 21;
+  CSREPC_C21 = 21;
   // Comando Sub-Regional do Alto Alentejo
-  // ANEPC: "Alto Alentejo" ???
-  CSREPC_ALTO_ALENTEJO = 22;
+  CSREPC_C22 = 22;
   // Comando Sub-Regional do Baixo Alentejo
-  // ANEPC: "Baixo Alentejo"
-  CSREPC_BAIXO_ALENTEJO = 23;
+  CSREPC_C23 = 23;
   // Comando Sub-Regional do Algarve
-  // ANEPC: "Algarve"
-  CSREPC_BAIXO_ALGARVE = 24;
+  CSREPC_C24 = 24;
 }
