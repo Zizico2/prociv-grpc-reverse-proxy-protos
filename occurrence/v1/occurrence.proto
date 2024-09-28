@@ -23,4 +23,5 @@ message Occurrence {
   uint32 number_of_water_means = 10;
   uint32 number_of_land_means = 11;
   uint32 number_of_operatives = 12;
+  uint64 anepc_number = 13;
 }
