@@ -10,5 +10,5 @@ service OccurrencesService {
 
 message ListOccurrencesRequest {}
 message ListOccurrencesResponse {
-  Occurrence occorrence = 1;
+  Occurrence occurrence = 1;
 }
